@@ -26,7 +26,7 @@ import {
 
 export default function Home() {
   return (
-    <View>
+    <View style={{justifyContent:'center', alignItems:'center', flex:1}}>
       <Text>Vikings</Text>
     </View>
   );
