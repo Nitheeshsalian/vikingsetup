@@ -2,7 +2,7 @@ import * as types from "../../../types/types";
 
 const initialState = {
     error: "",
-    processing_request: false
+    processing_request: false,
 };
 
 const homeReducer = (state = initialState, action) => {
@@ -12,7 +12,6 @@ const homeReducer = (state = initialState, action) => {
                 ...state,
                 error: "",
             };
-
 
         default:
             return state;
