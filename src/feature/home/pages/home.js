@@ -26,12 +26,14 @@ export default Home = ({ navigation }) => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
 
+    //this is reducer selector
     const errors = useSelector((state) => state.homeReducer.errors);
     const processing_request = useSelector(
         (state) => state.homeReducer.processing_request
     );
 
     console.log(errors);
+    //create dispatch function from redux
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -39,10 +41,13 @@ export default Home = ({ navigation }) => {
         console.log("error  " + errors);
         console.log("processing_request  " + processing_request);
         if (processing_request == true) {
+            //conditional actions dispatch
             dispatch(clearError("Erros cleared"));
         }
     });
+
     submit = () => {
+        //calling defined actions from dispatch
         dispatch(setErros("New Error"));
         if (userName == "" || password == "") {
             setError(true);
