@@ -11,18 +11,11 @@ export default function MyStack() {
     return (
         <Stack.Navigator
             initialRouteName="Home"
-            headerMode="screen"
+            headerMode="none"
             screenOptions={{
                 headerTintColor: "white",
-                headerStyle: { backgroundColor: "tomato" },
             }}>
-            <Stack.Screen
-                name="Home"
-                component={Home}
-                options={{
-                    title: "Awesome app",
-                }}
-            />
+            <Stack.Screen name="Home" component={Home} />
             <Stack.Screen
                 name="Password"
                 component={Password}
